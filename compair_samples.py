@@ -301,6 +301,12 @@ re_ped2.close()
 rename_chipid_file.close()
 common_snp_file.close()
 
+# 如果输入文件出现错误
+if error_status:
+    print("Please check your file again!")
+    sys.exit(1)
+
+
 #extract merge recodeA
 
 merge_status = os.system(f"plink --allow-extra-chr --chr-set 95 --file {plink_prefix1}_temp --merge {plink_prefix2}_temp --extract {plink_prefix1}_{plink_prefix2}_common_snp_temp.txt --recodeA --out {plink_prefix1}_{plink_prefix2}_merge_temp > /dev/null")
