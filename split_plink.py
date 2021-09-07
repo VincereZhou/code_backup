@@ -68,7 +68,7 @@ for i in dick: # 所有品种
     os.system(f"cp {map_file_name} {i}.map") 
     out_plink_list = []
     for i2 in dick[i]:
-        # 如果芯片号不在plik文件中报错
+        # 如果芯片号不在plink文件中报错
         if i2 not in dick2:
             print(f"Error: {i2} in {sys.argv[1]} not in {sys.argv[2]}\n")
             sys.exit(1)
