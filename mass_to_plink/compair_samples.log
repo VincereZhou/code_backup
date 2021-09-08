@@ -1,0 +1,43 @@
+ ---------------------------------------------
+|             compare_samples.py              |
+|                                             |
+|             2021 - Version 1.3              |
+|          (lase update: Aug 08, 2021)        |
+|             Compass, Beijing                |
+ ---------------------------------------------
+
+Start time: 2021-09-08 17:15:03
+
+Arguments
+
+  --plink1 new1
+
+  --plink2 new2
+
+  --chipid1 None
+
+  --chipid2 None
+
+  --cmp-all no
+
+  --exclude-miss no
+
+  --save-temp no
+
+  --out cmp_two_plinks.txt
+
+
+Number of common SNPs in two plink files: 21
+
+Number of records present in plink1 ped file: 113
+
+Number of records present in plink2 ped file: 113
+
+Number of common samples in two plink file: 113
+
+Number of records present in merged ped file: 226
+
+Number of SNPs in merged plink files: 21
+
+Finish time: 2021-09-08 17:15:03
+

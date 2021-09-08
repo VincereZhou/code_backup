@@ -1,0 +1,33 @@
+PLINK v1.90b5.3 64-bit (21 Feb 2018)
+Options in effect:
+  --allow-extra-chr
+  --compound-genotypes
+  --file compound
+  --out new2
+  --recode
+
+Hostname: localhost.localdomain
+Working directory: /mnt/data/zhouziwen/test/test/zhouziwen/mass_to_plink
+Start time: Wed Sep  8 17:12:13 2021
+
+Note: --compound-genotypes flag unnecessary (spaces between alleles in .ped
+and .lgen files are optional if all alleles are single-character).
+Random number seed: 1631092333
+515185 MB RAM detected; reserving 257592 MB for main workspace.
+Scanning .ped file... done.
+Performing single-pass .bed write (21 variants, 113 people).
+--file: new2-temporary.bed + new2-temporary.bim + new2-temporary.fam written.
+21 variants loaded from .bim file.
+113 people (0 males, 0 females, 113 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to new2.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 113 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Warning: Nonmissing nonmale Y chromosome genotype(s) present; many commands
+treat these as missing.
+Total genotyping rate is 0.899558.
+21 variants and 113 people pass filters and QC.
+Note: No phenotypes present.
+--recode ped to new2.ped + new2.map ... done.
+
+End time: Wed Sep  8 17:12:13 2021
