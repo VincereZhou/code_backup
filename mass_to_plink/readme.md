@@ -1,8 +1,11 @@
 # 使用 R 转换数据
 
+cd /mnt/data/zhouziwen/test/test/zhouziwen/mass_to_plink
+
 Rscript mass_to_plink.R rawdata.xlsx raw.map
 
 mv new.ped new1.ped
+
 mv new.map new1.map
 
 # 使用 python 进行转换
