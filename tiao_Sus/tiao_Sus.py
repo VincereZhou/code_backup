@@ -26,6 +26,3 @@ while j < len(dick): #不是<=
     
 in_file.close()
 out_file.close()
-
-           
-        
