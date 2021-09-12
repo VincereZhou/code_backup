@@ -9,3 +9,5 @@
 | split_plink.py         | [根据芯片号拆分plink文件的代码实现](https://vincere.fun/posts/506fc784/) |
 | mass_to_plink          | [规整某类基因型数据R代码与python代码实现](https://vincere.fun/posts/2c9b1be7/) |
 | bootstrap_maf.py       | [使用自助法估计MAF标准误](https://vincere.fun/posts/c3c06dcb/) |
+| tiao_Sus               | [提取FASTA文件描述行中含有特定字符记录的python代码实现](https://vincere.fun/posts/a96c56b8/) |
+
