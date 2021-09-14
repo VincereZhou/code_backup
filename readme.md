@@ -11,4 +11,6 @@
 | bootstrap_maf.py       | [使用自助法估计MAF标准误](https://vincere.fun/posts/c3c06dcb/) |
 | tiao_Sus               | [提取FASTA文件描述行中含有特定字符记录的python代码实现](https://vincere.fun/posts/a96c56b8/) |
 | snp_order.py           | [调整plink文件SNP顺序代码实现](https://vincere.fun/posts/c9697aaa/) |
+| cmp_bims.py            | [通过比对bim文件查找有问题基因型文件代码实现](https://vincere.fun/posts/58fe67f5/) |
+| cmp_two_bims.py        | [通过比对bim文件查找有问题基因型文件代码实现](https://vincere.fun/posts/58fe67f5/) |
 
