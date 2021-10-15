@@ -15,4 +15,5 @@
 | cmp_two_bims.py        | [通过比对bim文件查找有问题基因型文件代码实现](https://vincere.fun/posts/58fe67f5/) |
 | compair_two_plinks.py  | [基于两个plink文件共同样本共同位点的基因型比对代码实现](https://vincere.fun/posts/9ad0a746/) |
 | compair_two_files.py   | [以某列作为主键比对两个文件内容代码实现](https://vincere.fun/posts/705b018f/) |
+| genotype_frequency.py  | [统计SNP基因型频率及MAF代码实现](https://vincere.fun/posts/636ff051/) |
 
