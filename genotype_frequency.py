@@ -6,7 +6,7 @@ import numpy as np
 
 raw_file_name = sys.argv[1]
 
-os.system(f"sed 's/NA/3/g' {raw_file_name} > temp.raw")
+os.system(f"sed 's/\<NA\>/3/g' {raw_file_name} > temp.raw") # 改为精准匹配
 
 raw_file = open("temp.raw",'r')
 raw_file_title = raw_file.readline().split() #剔除标题
