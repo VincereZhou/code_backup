@@ -33,7 +33,7 @@ p_rate = p_array/(p_array+h_array+r_array)
 h_rate = h_array/(p_array+h_array+r_array)
 r_rate = r_array/(p_array+h_array+r_array)
 
-maf_rate = (2*p_array + h_array)/2
+maf_rate = (2*p_rate + h_rate)/2
 
 # 写入结果文件
 out_file = open(sys.argv[2],'w')
