@@ -71,8 +71,8 @@ if not Judge_file(args.file2):
 file1 = open(args.file1,'r')
 file2 = open(args.file2,'r')
 
-file1_column = len(file1.readline().split(args.file_separator))
-file2_column = len(file2.readline().split(args.file_separator))
+file1_column = len(file1.readline().strip().split(args.file_separator))
+file2_column = len(file2.readline().strip().split(args.file_separator))
 
 if file1_column != file2_column:
     print("Error: file1 and file2 has different columns in first row")
@@ -94,7 +94,7 @@ temp_line_set = set()
 dict1 = {}
 for i in file1:
     j += 1
-    f = i.split()
+    f = i.strip().split(args.file_separator)
     if (len(f) == file1_column):
         if '\t'.join(f) not in temp_line_set:
             temp_line_set.add('\t'.join(f))
@@ -117,7 +117,7 @@ dict2 = {}
 only_in_file2_list = [] # 只在 file2 中的键的内容
 for i in file2:
     j += 1
-    f = i.split()
+    f = i.strip().split(args.file_separator)
     if (len(f) == file2_column):
         if '\t'.join(f) not in temp_line_set:
             temp_line_set.add('\t'.join(f))
