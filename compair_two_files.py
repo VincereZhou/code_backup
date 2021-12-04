@@ -14,7 +14,8 @@ parser.add_argument("--file1", required=True,
 parser.add_argument("--file2", required=True, 
     help='''the second file's name''')
 parser.add_argument("--key-column", required=False, default = "1",
-    help='''the column index to set as key, default is 1, means first column''')
+    help='''the column number to set as key, if you need to specify multiple columns, use ',' as separator , for example '1,2' .
+    default is 1, means first column''')
 parser.add_argument("--file-separator", required=False,
     help='''separator of two files, default is backspace or tab''')
 
@@ -78,15 +79,18 @@ if file1_column != file2_column:
     print("Error: file1 and file2 has different columns in first row")
     sys.exit(1)
 
-if (not is_int(args.key_column)) or (int(args.key_column) < 0) or (int(args.key_column) > file1_column):
-    print("Error: --key-column is not integer or out of columns range")
-    sys.exit(1)
+key_column_str_list = args.key_column.split(',')  # 所有关键列组成的列表，元素为字符串 
+
+for i in key_column_str_list:
+    if (not is_int(i)) or (int(i) < 0) or (int(i) > file1_column):
+        print("Error: key column {i} is not integer or out of columns range")
+        sys.exit(1)
+
+key_index_list = [int(i)-1 for i in key_column_str_list]  # 所有关键列索引组成的列表
 
 # 检查文件
 file1.seek(0)
 file2.seek(0)
-
-key_index = int(args.key_column) - 1
 
 j = 0
 temp_id_set = set()
@@ -98,16 +102,19 @@ for i in file1:
     if (len(f) == file1_column):
         if '\t'.join(f) not in temp_line_set:
             temp_line_set.add('\t'.join(f))
-            if f[key_index] not in temp_id_set:
-                temp_id_set.add(f[key_index])
-                dict1[f[key_index]] = '\t'.join(f) # 键：行内容
+            key = f[key_index_list[0]] # 键：多列内容用 \t 结合到一起
+            for i2 in key_index_list[1:]:
+                key = key + "\t" + f[i2]
+            if key not in temp_id_set:
+                temp_id_set.add(key)
+                dict1[key] = '\t'.join(f) # 键：行内容
             else:
-                print(f"Error: duplicated id {f[key_index]} in different rows in file1\n") 
+                print(f"Error: duplicated id {key} in different rows in {args.file1}\n") 
                 error_status = True
         else:
-            print(f"Waring: duplicted row {j} in file1\n")
+            print(f"Waring: duplicted row {j} in {args.file1}\n")
     else:
-        print(f"Error: {j} row in file1 has less or more than {file1_column} columns\n")
+        print(f"Error: {j} row in {args.file1} has less or more than {file1_column} columns\n")
         error_status = True
 
 j = 0
@@ -121,19 +128,22 @@ for i in file2:
     if (len(f) == file2_column):
         if '\t'.join(f) not in temp_line_set:
             temp_line_set.add('\t'.join(f))
-            if f[key_index] not in temp_id_set:
-                temp_id_set.add(f[key_index])
-                if f[key_index] in dict1:
-                    dict2[f[key_index]] = '\t'.join(f) # 共同的键：第二个文件行内容
+            key = f[key_index_list[0]] # 键：多列内容用 \t 结合到一起
+            for i2 in key_index_list[1:]:
+                key = key + "\t" + f[i2]
+            if key not in temp_id_set:
+                temp_id_set.add(key)
+                if key in dict1:
+                    dict2[key] = '\t'.join(f) # 共同的键：第二个文件行内容
                 else:
                     only_in_file2_list.append('\t'.join(f)+'\n')
             else:
-                print(f"Error: duplicated id {f[key_index]} in different rows in file2\n") 
+                print(f"Error: duplicated id {key} in different rows in {args.file2}\n") 
                 error_status = True
         else:
-            print(f"Waring: duplicted row {j} in file2\n")
+            print(f"Waring: duplicted row {j} in {args.file2}\n")
     else:
-        print(f"Error: {j} row in file2 has less or more than {file2_column} columns\n")
+        print(f"Error: {j} row in {args.file2} has less or more than {file2_column} columns\n")
         error_status = True
 
 file1.close()
