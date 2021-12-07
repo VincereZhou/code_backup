@@ -112,7 +112,7 @@ for i in file1:
                 print(f"Error: duplicated id {key} in different rows in {args.file1}\n") 
                 error_status = True
         else:
-            print(f"Waring: duplicted row {j} in {args.file1}\n")
+            print(f"Warning: duplicted row {j} in {args.file1}\n")
     else:
         print(f"Error: {j} row in {args.file1} has less or more than {file1_column} columns\n")
         error_status = True
@@ -141,7 +141,7 @@ for i in file2:
                 print(f"Error: duplicated id {key} in different rows in {args.file2}\n") 
                 error_status = True
         else:
-            print(f"Waring: duplicted row {j} in {args.file2}\n")
+            print(f"Warning: duplicted row {j} in {args.file2}\n")
     else:
         print(f"Error: {j} row in {args.file2} has less or more than {file2_column} columns\n")
         error_status = True
