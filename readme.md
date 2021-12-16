@@ -17,4 +17,5 @@
 | compair_two_files.py   | [以某列作为主键比对两个文件内容代码实现](https://vincere.fun/posts/705b018f/) |
 | genotype_frequency.py  | [统计SNP基因型频率及MAF代码实现](https://vincere.fun/posts/636ff051/) |
 | split_plink.exe        | [python脚本转为exe可执行文件-拆分plink文件](https://vincere.fun/posts/45f5af89/) |
+| snp_trios_mendel.py    | [计算trios的孟德尔错误率](https://vincere.fun/posts/7bc46342/) |
 
