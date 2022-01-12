@@ -8,7 +8,6 @@
 | pick0.py               | [根据ID提取文件中相应行的python脚本实现与详细讲解](https://vincere.fun/posts/a3902eec/) |
 | split_plink.py         | [根据芯片号拆分plink文件的代码实现](https://vincere.fun/posts/506fc784/) |
 | mass_to_plink          | [规整某类基因型数据R代码与python代码实现](https://vincere.fun/posts/2c9b1be7/) |
-| bootstrap_maf.py       | [使用自助法估计MAF标准误](https://vincere.fun/posts/c3c06dcb/) |
 | tiao_Sus               | [提取FASTA文件描述行中含有特定字符记录的python代码实现](https://vincere.fun/posts/a96c56b8/) |
 | snp_order.py           | [调整plink文件SNP顺序代码实现](https://vincere.fun/posts/c9697aaa/) |
 | cmp_bims.py            | [通过比对bim文件查找有问题基因型文件代码实现](https://vincere.fun/posts/58fe67f5/) |
@@ -16,6 +15,4 @@
 | compair_two_plinks.py  | [基于两个plink文件共同样本共同位点的基因型比对代码实现](https://vincere.fun/posts/9ad0a746/) |
 | compair_two_files.py   | [以某列作为主键比对两个文件内容代码实现](https://vincere.fun/posts/705b018f/) |
 | genotype_frequency.py  | [统计SNP基因型频率及MAF代码实现](https://vincere.fun/posts/636ff051/) |
-| split_plink.exe        | [python脚本转为exe可执行文件-拆分plink文件](https://vincere.fun/posts/45f5af89/) |
-| snp_trios_mendel.py    | [计算trios的孟德尔错误率](https://vincere.fun/posts/7bc46342/) |
 
